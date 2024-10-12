@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
         html,
@@ -16,17 +19,64 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
+        :root {
+            --regular: hsl(60, 2%, 48%);
+            --white: hsl(0, 0%, 88%);
+            --black: hsl(240, 4%, 27%);
+            --cyan: hsl(180, 70%, 50%);
+            --dim-cyan: hsl(180, 100%, 27%);
+            --magenta: hsl(300, 70%, 50%);
+            --dim-magenta: hsl(300, 100%, 27%);
+            --yellow: hsl(60, 70%, 50%);
+            --dim-yellow: hsl(60, 100%, 25%);
+            --red: hsl(0, 90%, 55%);
+            --dim-red: hsl(0, 100%, 27%);
+            --green: hsl(120, 60%, 50%);
+            --dim-green: hsl(120, 100%, 25%);
+            --blue: hsl(240, 100%, 70%);
+            --dim-blue: hsl(240, 50%, 43%);
+            --background-black: hsl(0, 0%, 2%);
+        }
+
         .terminal {
-            background-color: hsl(0, 0%, 2%);
+            background-color: var(--background-black);
             height: 100dvh;
-            max-width: 36em;
+            min-width: 21em;
+            max-width: 48em;
             margin: auto;
             display: flex;
             flex-direction: column;
         }
 
         .terminal .output {
+            padding: 1.5rem;
+            overflow: auto;
             flex: 1;
+        }
+
+        .terminal .output p {
+            margin: 0.8rem 0 0;
+            font-family: "Source Sans 3", sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .terminal .output .title {
+            color: var(--white);
+        }
+
+        .terminal .output .description {
+            font-weight: normal;
+            color: var(--regular);
+        }
+
+        .terminal .output .item {
+            color: var(--yellow);
+        }
+
+        .terminal .output .char {
+            color: var(--magenta);
         }
 
         .terminal .input {
@@ -36,15 +86,15 @@
             justify-content: center;
             gap: 1rem;
             padding: 1rem 0;
-            background-color: dimgray;
+            background-color: #31313a;
         }
 
         .terminal .input button {
             border: 0;
             width: 3rem;
             height: 3rem;
-            border-radius: 2rem;
-            background-color: darkgray;
+            border-radius: 1.5rem;
+            background-color: #a2a2a2;
         }
     </style>
 </head>
@@ -52,7 +102,16 @@
 <body>
     <div class="terminal">
         <div class="output">
-    
+            <p class="title">Вход в заброшенную нору.</p>
+            <p class="description">
+                Вы стоите на склоне зеленого холма, перед обветшавшей и распахнутой настежь круглой дверью. Вероятно, тут раньше
+                жили хоббиты, но это было очень давно. На свой страх и риск можно заглянуть внутрь, но будьте осторожны: нора
+                может быть весьма обширной. Не забудьте фонарь!
+            </p>
+            <p class="item">Картонная коробка со следами крысиных зубов валяется на полу.</p>
+            <p class="item">У стены стоит старый, почерневший от сырости сундук.</p>
+            <p class="char">Маленькая коричневая лягушка затаилась в углу.</p>
+            <p class="char">Розовый дождевой червяк наполовину выполз из земли.</p>
         </div>
         <div class="input">
             <button></button>
