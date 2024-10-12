@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .terminal {
+            background-color: hsl(0, 0%, 2%);
+            height: 100dvh;
+            max-width: 36em;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .terminal .output {
+            flex: 1;
+        }
+
+        .terminal .input {
+            font-size: 0;
+            display: grid;
+            grid-template-columns: repeat(5, 3rem);
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            background-color: dimgray;
+        }
+
+        .terminal .input button {
+            border: 0;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 2rem;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="terminal">
+        <div class="output">
+    
+        </div>
+        <div class="input">
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+    </div>
+</body>
+
+</html>
